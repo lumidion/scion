@@ -77,7 +77,7 @@ rule_graph = { path = "rule_graph" }
 smallvec = { version = "1", features = ["union"] }
 stdio = { path = "stdio" }
 store = { path = "fs/store" }
-serde = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
 task_executor = { path = "task_executor" }
 tempfile = { workspace = true }
@@ -100,6 +100,8 @@ fs = { path = "./fs" }
 env_logger = { workspace = true }
 
 [build-dependencies]
+serde = "1.0.205"
+serde_json = "1.0.122"
 pyo3-build-config = { workspace = true }
 
 [lints]

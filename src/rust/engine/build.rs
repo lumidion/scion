@@ -1,6 +1,8 @@
 // Copyright 2017 Pants project contributors (see CONTRIBUTORS.md).
 // Licensed under the Apache License, Version 2.0 (see LICENSE).
 
+mod generate_exception_types;
+
 fn main() {
     pyo3_build_config::add_extension_module_link_args();
 
