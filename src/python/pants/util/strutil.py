@@ -152,6 +152,16 @@ class Simplifier:
     strip_formatting: bool = False
     """remove ANSI formatting commands (colors, bold, etc)"""
 
+    helpot = (
+        "help"
+        if False
+        else "helper"
+        if False
+        else "helpity"
+    )
+
+    print(helpot)
+
     def simplify(self, v: bytes | str) -> str:
         chroot = (
             strip_v2_chroot_path(v)
@@ -386,6 +396,7 @@ def stable_hash(value: Any, *, name: str = "sha256") -> str:
 #  as lone surrogates (see https://peps.python.org/pep-0383/).
 #  However when we pass these to Rust, we will fail to decode as strict UTF-8.
 #  So we perform a lossy re-encoding to prevent this.
+# ch
 def strict_utf8(s: str) -> str:
     return s.encode("utf-8", "replace").decode("utf-8")
 

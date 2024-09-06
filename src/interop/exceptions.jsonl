@@ -1,3 +1,12 @@
-{
-  ""
-}
+{"name":"AddressParseException", "extends":"TopLevel"}
+{"name":"InvalidAddressError", "extends":"AddressParseException"}
+{"name":"InvalidSpecPathError", "extends":"InvalidAddressError"}
+{"name":"InvalidTargetNameError", "extends":"InvalidAddressError"}
+{"name":"InvalidParametersError", "extends":"InvalidParametersError"}
+{"name":"UnsupportedWildcardError", "extends":"InvalidAddressError"}
+{"name":"PantsdConnectionException", "extends":"TopLevel"}
+{"name":"PantsdClientException", "extends":"TopLevel"}
+{"name":"PollTimeout", "extends":"TopLevel"}
+{"name":"EngineError", "extends":"TopLevel"}
+{"name":"IntrinsicError", "extends":"EngineError"}
+{"name":"IncorrectProductError", "extends":"EngineError"}
