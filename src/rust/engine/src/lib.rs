@@ -3,6 +3,7 @@
 
 // TODO: See https://github.com/PyO3/pyo3/issues/2555
 #![allow(clippy::borrow_deref_ref)]
+#![allow(unused)]
 #![type_length_limit = "43757804"]
 
 #[macro_use]
@@ -19,6 +20,10 @@ mod scheduler;
 mod session;
 mod tasks;
 mod types;
+
+pub mod engine_interop {
+    include!(concat!(env!("OUT_DIR"), "/engine_interop.rs"));
+}
 
 pub use crate::context::{
     Context, Core, ExecutionStrategyOptions, LocalStoreOptions, RemotingOptions, SessionCore,

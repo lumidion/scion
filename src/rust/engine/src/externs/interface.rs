@@ -60,16 +60,13 @@ use crate::{
 fn native_engine(py: Python, m: &PyModule) -> PyO3Result<()> {
     intrinsics::register(py, m)?;
     externs::register(py, m)?;
-    externs::address::register(py, m)?;
     externs::fs::register(m)?;
-    externs::nailgun::register(py, m)?;
     externs::options::register(m)?;
     externs::process::register(m)?;
     externs::pantsd::register(py, m)?;
     externs::scheduler::register(m)?;
     externs::target::register(m)?;
     externs::testutil::register(m)?;
-    externs::workunits::register(m)?;
     externs::dep_inference::register(m)?;
 
     m.add("PollTimeout", py.get_type::<PollTimeout>())?;

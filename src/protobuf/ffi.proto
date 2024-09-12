@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ffi;
+
+message EngineException {
+  string name = 1;
+  string message = 2;
+}
+
+message MetricCounterNames {
+  repeated string names = 1;
+}

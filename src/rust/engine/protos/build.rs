@@ -19,6 +19,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     .compile_with_config(
       config,
       &[
+        "../../../protobuf/ffi.proto",
         "protos/bazelbuild_remote-apis/build/bazel/remote/execution/v2/remote_execution.proto",
         "protos/bazelbuild_remote-apis/build/bazel/semver/semver.proto",
         "protos/buildbarn/cas.proto",
@@ -31,6 +32,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         "protos/standard/google/protobuf/empty.proto",
       ],
       &[
+        "../../../protobuf",
         "protos/bazelbuild_remote-apis",
         "protos/buildbarn",
         "protos/googleapis",

@@ -29,6 +29,10 @@ pub mod gen {
             tonic::include_proto!("google.rpc");
         }
     }
+
+    pub mod ffi {
+        tonic::include_proto!("ffi");
+    }
     pub mod build {
         pub mod bazel {
             pub mod remote {
